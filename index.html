@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <title>Technical Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header class="navbar-header">
+            <h1>Python Documentation</h1>
+        </header>
+        <div class="nav-links">
+            <a href="#Introduction" class="nav-link">Introduction</a>
+            <a href="#Python_Input/Output" class="nav-link">Python Input/Output</a>
+            <a href="#Python_Operators" class="nav-link">Python Operators</a>
+            <a href="#Python_Data_Types" class="nav-link">Python Data Types</a>
+            <a href="#Python_String" class="nav-link">Python String</a>
+            <a href="#References" class="nav-link">References</a>
+        </div>
+    </nav>
+    <main id="main-doc">
+        <div class="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics developed by Guido van Rossum. 
+                    
+                    <br><br>It was originally released in 1991. Designed to be easy as well as fun, the name "Python" is a nod to the British comedy group Monty Python.</p>
+                <h2>Why is it popular?</h2>
+                    <ul>
+                        <li>Emphasis on code readability, shorter codes, ease of writing</li>
+                        <li>Programmers can express logical concepts in fewer lines of code in comparison to languages such as C++ or Java.</li>
+                        <li>Python supports multiple programming paradigms, like object-oriented, imperative and functional programming or procedural.</li>
+                        <li>There exists inbuilt functions for almost all of the frequently used concepts.</li>
+                        <li>Philosophy is “Simplicity is the best”.</li>
+                    </ul>
+                <h2>Advantages of Python</h2>
+                <ol>
+                    <li>Presence of third-party modules </li>
+                    <li>Extensive support libraries(NumPy for numerical calculations, Pandas for data analytics etc) </li>
+                    <li>Open source and community development </li>
+                    <li>Versatile, Easy to read, learn and write</li>
+                    <li>User-friendly data structures </li>
+                    <li>Dynamically typed language(No need to mention data type based on the value assigned, it takes data type) </li>
+                    <li>Ideal for prototypes, provide more functionality with less coding</li>
+                    <li>Portable across Operating systems </li>
+                </ol>
+            </section>
+            <section class="main-section" id="Python_Input/Output">
+                <header>Python Input/Output</header>
+                <p>Developers often have a need to interact with users, either to get data or to provide some sort of result. Most programs today use a dialog box as a way of asking the user to provide some type of input. While Python provides us with two inbuilt functions to read the input from the keyboard. </p>
+                <h2>Python Input</h2>
+                <p>input (): This function first takes the input from the user and converts it into a string. The type of the returned object always will be <class ‘str’>. 
+                    It does not evaluate the expression it just returns the complete statement as String. For example, Python provides a built-in function called input which 
+                    takes the input from the user. When the input function is called it stops the program and waits for the user’s input. When the user presses enter, the program 
+                    resumes and returns what the user typed. 
+                </p>
+                <pre><code> 
+                    <strong>CODE:</strong>
+                    inp = input('STATEMENT')
+    
+                    Example:
+                    1.  >>> name = input('What is your name?\n')     # \n ---> newline  ---> It causes a line break
+                                >>> What is your name?
+                                Ram
+                                >>> print(name)
+                                Ram 
+                                
+                                # ---> comment in python
+                </code></pre>
+                <h2>How does the input work</h2>
+                <p>
+                    <ul>
+                         <li>When input() function executes program flow will be stopped until the user has given input.</li>
+                         <li>The text or message displayed on the output screen to ask a user to enter an input value is optional i.e. the prompt, which will be printed on the screen is optional.</li>
+                        <li>Whatever you enter as input, the input function converts it into a string. if you enter an integer value still input() function converts it into a string. You need to explicitly convert it into an integer in your code using typecasting. </li>
+                    </ul>
+                </p>
+
+                <p>If you want to specify the data type of a variable, this can be done with casting. String variables can be declared either by using single or double quotes. 
+                    In addition, it is important to remember that variable names are case-sensitive, whereas, the hashtag symbol (#) is used for comments.</p>
+                <pre><code>
+                    x = str(3)    # x will be '3'
+                    y = int(3)    # y will be 3
+                    z = float(3)  # z will be 3.0
+                </code></pre>
+            </section>
+            <section class="main-section" id="Python_Operators">
+                <header>Python Operators</header>
+                <p>In Python programming, Operators in general are used to perform operations on values and variables. 
+                    These are standard symbols used for the purpose of logical and arithmetic operations. In this article, we will look into different types of Python operators. </p>
+                <pre><code>
+                        Operator	         Description	                            Syntax
+                    +	Addition:            adds two operands	                         x + y
+                    –	Subtraction:         subtracts two operands	                     x – y
+                    *	Multiplication:      multiplies two operands	                 x * y
+                    /	Division (float):    divides the first operand by the second	 x / y
+                    //	Division (floor):    divides the first operand by the second	 x // y
+                    %	Modulus:             returns the remainder                     	 x % y
+                    **	Power:               Returns first raised to power second	     x ** y
+                </code></pre>
+                <h2>Examples (Division Operator)</h2>
+                <p>Division Operators allow you to divide two numbers and return a quotient, i.e., 
+                    the first number or number at the left is divided by the second number or number at the right and returns the quotient. </p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    # python program to demonstrate the use of "/" 
+                    print(5/5)
+                    print(10/2)
+                    print(-10/2)
+                    print(20.0/2)
+
+                    <strong>OUTPUT:</strong>
+                    1.0
+                    5.0
+                    -5.0
+                    10.0
+                </code></pre>
+                <h2>Types of Operators in Python</h2>
+                    <ol>
+                        <li>Arithmetic Operators</li>
+                        <li>Comparison Operators</li>
+                        <li>Logical Operators</li>
+                        <li>Bitwise Operators</li>
+                        <li>Assignment Operators</li>
+                        <li>Identity Operators and Membership Operators</li>
+                    </ol>
+                <h2>Precedence of Arithmetic Operators in Python</h2>
+                <p>The precedence of Arithmetic Operators in python is as follows:</p>
+                <ol>
+                    <li>P – Parentheses</li>
+                    <li>E – Exponentiations</li>
+                    <li>M – Multiplication (Multiplication and division have the same precedence)</li>
+                    <li>D – Division</li>
+                    <li>A – Addition (Addition and subtraction have the same precedence)</li>
+                    <li>S – Subtraction</li>
+                </ol>
+            <section class="main-section" id="Python_Data_Types">
+                <header>Python Data Types</header>
+                <p>Data types are the classification or categorization of data items. It represents the kind of value that tells what operations can be performed on a particular data. Since everything is an object in Python programming, data types are actually classes and variables are instances (object) of these classes. </p>
+                <p>The following are the standard or built-in data types in Python:</p>
+                <ul>
+                    <li>Numeric</li>
+                    <li>Sequence Type</li>
+                    <li>Boolean</li>
+                    <li>Set</li>
+                    <li>Dictionary</li>
+                    <li>Binary Types( memoryview, bytearray, bytes)</li>
+                </ul>
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20191023173512/Python-data-structure.jpg">
+                <h2>What is Python type()  Function?</h2>
+                <p>To define the values ​​of various data types and check their data types we use the type() function. Consider the following examples.</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                # DataType Output: str
+                x = "Hello World"
+                
+                # DataType Output: int
+                x = 50
+                
+                # DataType Output: float
+                x = 60.5
+                
+                # DataType Output: complex
+                x = 3j
+                
+                # DataType Output: list
+                x = ["geeks", "for", "geeks"]
+                
+                # DataType Output: tuple
+                x = ("geeks", "for", "geeks")
+                
+                # DataType Output: range
+                x = range(10) 
+                
+                # DataType Output: dict
+                x = {"name": "Suraj", "age": 24}
+                
+                # DataType Output: set
+                x = {"geeks", "for", "geeks"}
+                
+                # DataType Output: frozenset
+                x = frozenset({"geeks", "for", "geeks"})
+                
+                # DataType Output: bool
+                x = True
+                
+                # DataType Output: bytes
+                x = b"Geeks"
+                
+                # DataType Output: bytearray
+                x = bytearray(4)
+                
+                # DataType Output: memoryview
+                x = memoryview(bytes(6))
+                
+                # DataType Output: NoneType
+                x = None
+                </code></pre>
+                <h2>Numeric Data Type in Python</h2>
+                <p>The numeric data type in Python represents the data that has a numeric value. 
+                    A numeric value can be an integer, a floating number, or even a complex number. These values are defined as Python int, Python float, and Python complex classes in Python.</p>
+                    <ul>
+                        <li>Integers – This value is represented by int class. It contains positive or negative whole numbers (without fractions or decimals). In Python, there is no limit to how long an integer value can be.</li>
+                        <li>Float – This value is represented by the float class. It is a real number with a floating-point representation. It is specified by a decimal point. Optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation.</li>
+                        <li>Complex Numbers – Complex number is represented by a complex class. It is specified as (real part) + (imaginary part)j. For example – 2+3j</li>
+                    </ul>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    # Python program to
+                    # demonstrate numeric value
+                     
+                    a = 5
+                    print("Type of a: ", type(a))
+                     
+                    b = 5.0
+                    print("\nType of b: ", type(b))
+                     
+                    c = 2 + 4j
+                    print("\nType of c: ", type(c))
+
+                    <strong>OUTPUT:</strong>
+                    Type of a:  <class 'int'>
+
+                    Type of b:  <class 'float'>
+
+                    Type of c:  <class 'complex'>
+                </code></pre>
+
+            <section class="main-section" id="Python_String">
+                <header>Python String</header>
+                <p>A String is a data structure in Python that represents a sequence of characters. It is an immutable data type, meaning that once you have created a string, you cannot change it. 
+                    Strings are used widely in many different applications, such as storing and manipulating text data, representing names, addresses, and other types of data that can be represented as text.</p>
+                <h3>What is a String in Python?</h3>
+                <p>Python does not have a character data type, a single character is simply a string with a length of 1.</p>
+                <pre><code>
+                    <strong>EXAMPLE:</strong>
+                    "Geeksforgeeks" or 'Geeksforgeeks' or "a"
+
+                    <strong>CODE:</strong>
+                    print("A Computer Science portal for geeks") 
+                    print('A')
+                    
+                    <strong>OUTPUT:</strong>
+                    A Computer Science portal for geeks
+                    A
+                </code></pre>
+                <h2>Creating a String in Python</h2>
+                <p>Strings in Python can be created using single quotes or double quotes or even triple quotes. Let us see how we can define a string in Python
+
+                    <br>Example:
+                    In this example, we will demonstrate different ways to create a Python String. We will create a string using single quotes (‘ ‘), double quotes (” “), and triple double quotes (“”” “””). The triple quotes can be used to declare multiline strings in Python.</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                # Python Program for 
+                # Creation of String 
+                
+                # Creating a String 
+                # with single Quotes 
+                String1 = 'Welcome to the Geeks World'
+                print("String with the use of Single Quotes: ") 
+                print(String1) 
+                
+                # Creating a String 
+                # with double Quotes 
+                String1 = "I'm a Geek"
+                print("\nString with the use of Double Quotes: ") 
+                print(String1) 
+                
+                # Creating a String 
+                # with triple Quotes 
+                String1 = '''I'm a Geek and I live in a world of "Geeks"'''
+                print("\nString with the use of Triple Quotes: ") 
+                print(String1) 
+                
+                # Creating String with triple 
+                # Quotes allows multiple lines 
+                String1 = '''Geeks 
+                            For 
+                            Life'''
+                print("\nCreating a multiline String: ") 
+                print(String1) 
+
+                    <strong>OUTPUT:</strong>
+                String with the use of Single Quotes: 
+                Welcome to the Geeks World
+                String with the use of Double Quotes: 
+                I'm a Geek
+                String with the use of Triple Quotes: 
+                I'm a Geek and I live in a world of "Geeks"
+                Creating a multiline String: 
+                Geeks
+                            For
+                            Life
+                </code></pre>
+                <h2>Accessing characters in Python String</h2>
+                <p>In Python, individual characters of a String can be accessed by using the method of Indexing. Indexing allows negative address references to access characters from the back of the String, e.g. -1 refers to the last character, -2 refers to the second last character, and so on. 
+                <br>
+                    While accessing an index out of the range will cause an IndexError. Only Integers are allowed to be passed as an index, float or other types that will cause a TypeError</p>
+                    <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200204160843/strings.jpg">
+
+            </section>
+            <section class="main-section" id="References">
+                <header>References</header>
+                <p>The content of this documentation page is taken from
+                    <a href="https://www.geeksforgeeks.org/python-programming-language/?ref=lbp" target="_blank">GeeksforGeeks</a>.
+                </p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
